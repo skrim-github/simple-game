@@ -91,5 +91,3 @@ if  main_menu_input == 1:   #if main menu input is 1 play game
     player_turn(player_health, enemy_health)
 else:   #else exit
     exit()  
-
-    #test
