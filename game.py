@@ -1,16 +1,16 @@
 import os
 import subprocess
 import time
-from random import * 
+from random import *
 
 player_health = int(100)
 enemy_health = int(100)
 menu_input = 0
 
 def clear_terminal():   #clear terminal depending on what opperating system
-    if os.name == 'nt':  
+    if os.name == 'nt':
         subprocess.call('cls', shell=True)
-    else: 
+    else:
         subprocess.call('clear', shell=True)
 
 clear_terminal()
@@ -64,7 +64,7 @@ def enemy_turn(player_health, enemy_health):
 
     time.sleep(3)
     clear_terminal()
-    random_number = randint(0,4)    
+    random_number = randint(0,4)
     if random_number < 4:   #if number is below 4 attack player
         random_number = randint(0,20)
         if player_health - random_number < 0:   #if health drops below 0 lose
@@ -90,4 +90,4 @@ def enemy_turn(player_health, enemy_health):
 if  main_menu_input == 1:   #if main menu input is 1 play game
     player_turn(player_health, enemy_health)
 else:   #else exit
-    exit()  
+    exit()
